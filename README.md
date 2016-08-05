@@ -6,7 +6,7 @@ This process generates a SLD in GeoServer based on the input classification of t
 
 ### Requirements
 
-1. The **[SLD Service Module](http://docs.geoserver.org/stable/en/user/community/sldservice/index.html)** has to be installed
+1. The **[SLD Service Module](http://docs.geoserver.org/stable/en/user/community/sldservice/index.html)** has to be installed in **[GeoServer](http://geoserver.org)** as community module.
 
 ### Data definition
 
@@ -31,6 +31,10 @@ Output:
 - url [required]
 
 ### Examples
+
+#### Clients
+
+1. [UNECA](http://fenix.fao.org/demo/uneca/#/domains/population)
 
 #### Legacy service
 
@@ -203,6 +207,34 @@ TODO
 
 ## Development
 
-### Start WPS project
+### Start a new WPS project
 
+```bash
+mvn -B archetype:generate \
+		-DartifactId=geo-wps \
+		-DgroupId=org.fao.fenix \
+		-Dname="Fenix WPS module" \
+		-DmoduleName=geo-wps \
+		-DmoduleDescription="WPS module"
+```
 
+Change the packaging property to the mode *jar*:
+
+```xml
+<packaging>jar</packaging>
+```
+
+Then create the artifact for the new WPS:
+
+```bash
+cd geo-wps
+mvn -B archetype:generate \
+	-DartifactId=wps-demo \
+	-DgroupId=org.fao.fenix.geo \
+	-Dname="Fenix Web Processing Service for demo" \
+	-Dpackage=org.fao.fenix.geo.demo \
+	-DmoduleName=wps-demo \
+	-DmoduleDescription="Fenix WPS module for demo"
+```
+
+You can also remove the generated **src** directory that is unnecessary.
