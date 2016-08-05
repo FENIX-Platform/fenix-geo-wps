@@ -1,5 +1,6 @@
 # fenix-geo-wps
 Geospatial web processing services for Fenix components
+<<<<<<< HEAD
 
 ## Fenix MapClassify
 This process generates a SLD in GeoServer based on the input classification of the layer choosen.
@@ -238,3 +239,5 @@ mvn -B archetype:generate \
 ```
 
 You can also remove the generated **src** directory that is unnecessary.
+=======
+>>>>>>> parent of 6074f59... Describe how mapclassify has to be implemented
