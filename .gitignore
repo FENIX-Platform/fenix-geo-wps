@@ -1,4 +1,30 @@
+build-full.bat
+target
+.settings
+.classpath
+.project
+.metadata
+.DS_Store
 *.class
+*.pyc
+
+/.metadata/
+
+# Intellij
+.idea/
+*.iml
+#
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+#
+# Package Files #
+*.jar
+*.war
+*.ear
+#
+# # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+/src/geo-wps/wps-mapclassify/nbproject/
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
